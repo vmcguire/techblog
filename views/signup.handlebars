@@ -1,4 +1,4 @@
-<div class="row p-2">
+<form class="row p-2 signup-form">
     <div class="col-4"></div>
     <div class="col-4">
         <div class="border">
@@ -12,21 +12,25 @@
                     <form>
                         <div class="form-group">
                             <label for="Username">Username</label>
-                            <input type="text" class="form-control" id="username" placeholder="username" />
+                            <input type="text" class="form-control" id="username-signup" placeholder="username" />
+                        </div>
+                        <div class="form-group">
+                            <label for="Email">Email</label>
+                            <input type="text" class="form-control" id="email-signup" placeholder="email@email.com" />
                         </div>
                         <div class="form-group">
                             <label for="Password">Password</label>
-                            <input type="text" class="form-control" id="password" placeholder="password" />
+                            <input type="text" class="form-control" id="password-signup" placeholder="password" />
                         </div>
                         <div class="row">
                             <div class="col-4">
-                                <button type="button" class="btn btn-primary">
-                                    <a class="text-light" href="dashboard.html">SignUp</a>
+                                <button type="submit" class="btn btn-primary text-light">
+                                    SignUp
                                 </button>
                             </div>
                             <div class="col-4"></div>
                             <div class="col-4">
-                                <a class="text-italic text-secondary" href="/login">Login
+                                <a class="text-italic text-secondary" href="login">Login
                                 </a>
                             </div>
                         </div>
@@ -36,4 +40,6 @@
         </div>
     </div>
     <div class="col-4"></div>
-</div>
+</form>
+
+<script src="/javascript/signup.js"></script>
