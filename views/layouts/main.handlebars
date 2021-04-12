@@ -22,7 +22,7 @@
                 <header>
                     <nav class="navbar fixed-top navbar-dark bg-primary justify-content-start">
                         <a class="navbar-brand" href="/">The Tech Blog</a>
-                        <ul class="nav">
+                        <ul class="nav mr-auto">
                             <li class="nav-item">
                                 <a class="nav-link active m-1 text-light" href="/">Home</a>
                             </li>
@@ -37,6 +37,13 @@
                                 {{/if}}
                             </li>
                         </ul>
+                        {{#if loggedIn}}
+                        <form class="form-inline my-2 my-lg-0">
+                            <a class="btn btn-outline-primary text-light bg-dark my-2 my-sm-0" type="submit">Hello,
+                                {{currentUser}}</a>
+                        </form>
+                        {{/if}}
+
                     </nav>
                 </header>
             </div>
