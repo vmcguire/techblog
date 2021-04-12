@@ -1,0 +1,71 @@
+<div class="row mb-2">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-8">
+                        <a href="/post/{{post.id}}" target="_blank">
+                            <h4>{{post.title}}</h4>
+                        </a>
+                        {{!-- <span>({{content}})</span> --}}
+                    </div>
+                    <div class="col-4">
+                        <p class="card-text font-italic">
+                            Written by {{post.user.username}} on {{post.created_at}}
+                            |
+                            <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
+                        </p>
+                    </div>
+                </div>
+                <p class="card-text">{{post.content}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{#if loggedIn}}
+<form class="row mb-2 comment-form">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row"></div>
+                <div>
+                    <div class="row px-2">
+                        <p class="card-text">Comment</p>
+                    </div>
+                    <div class="row px-2">
+                        <textarea name="comment-body" class="text-area"> </textarea>
+                    </div>
+                    <div class="row px-2">
+                        <button class="btn btn-primary mt-2 btnWidth" type="submit">Submit Comment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+{{/if}}
+
+<div class="row mb-2">
+    {{#each post.comments}}
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row"></div>
+                <div>
+                    <div class="row px-2">
+                        <p class="card-text">{{comment_text}}</p>
+                    </div>
+                    <div class="row px-2">
+                        <p class="card-text">-{{user.username}} on {{created_at}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}
