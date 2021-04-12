@@ -1,0 +1,32 @@
+{{!-- Beginning of First Blog Post --}}
+<ol class="post-list">
+    {{#each posts as |post|}}
+    <li class="nostyle">
+        <div class="row mb-2">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-8">
+                                <a href="{{post.content}}" target="_blank">
+                                    <h4>{{post.title}}</h4>
+                                </a>
+                                {{!-- <span>({{content}})</span> --}}
+                            </div>
+                            <div class="col-4">
+                                <p class="card-text font-italic">
+                                    Written by {{post.user.username}} on {{post.created_at}}
+                                    |
+                                    <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="card-text">{{post.content}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</ol>
+{{!-- End of First Blog Post --}}
