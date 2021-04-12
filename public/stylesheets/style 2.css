@@ -1,0 +1,41 @@
+body {
+  padding-top: 120px;
+  height: 100%;
+  margin: 0;
+}
+
+.bottom-center {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btnDiv {
+  width: 100%;
+  left: 0;
+  bottom: 10px;
+  position: absolute;
+}
+.text-area {
+  min-width: 100%;
+  min-height: 100px;
+}
+
+.btnWidth {
+  width: 100%;
+}
+
+.btnWidth80 {
+  width: 80%;
+}
+
+.title-area {
+  min-width: 100%;
+  min-height: 100px;
+}
+.content-box {
+  min-height: 100px;
+}
+
+.dashboard {
+}
