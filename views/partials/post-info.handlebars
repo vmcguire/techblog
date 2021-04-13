@@ -1,0 +1,24 @@
+<div class="row mb-2">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-8">
+                        <a href="/api/edit/{{id}}" target="_blank">
+                            <h4>{{title}}</h4>
+                        </a>
+                        {{!-- <span>({{content}})</span> --}}
+                    </div>
+                    <div class="col-4">
+                        <p class="card-text font-italic">
+                            Author: {{user.username}} on {{format_date created_at}}
+                            </br>
+                            <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+                        </p>
+                    </div>
+                </div>
+                <p class="card-text">{{content}}</p>
+            </div>
+        </div>
+    </div>
+</div>

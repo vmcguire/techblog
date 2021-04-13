@@ -1,0 +1,30 @@
+{{> post-info post }}
+
+{{#if loggedIn}}
+<form class="row mb-2 comment-form">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row"></div>
+                <div>
+                    <div class="row px-2">
+                        <p class="card-text">Comment</p>
+                    </div>
+                    <div class="row px-2">
+                        <textarea name="comment-body" class="text-area"> </textarea>
+                    </div>
+                    <div class="row px-2">
+                        <button class="btn btn-primary mt-2 btnWidth" type="submit">Submit Comment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+{{/if}}
+
+{{> comments post.comments}}
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}
