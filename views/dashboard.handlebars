@@ -1,6 +1,6 @@
-{{#if posts.length}}
 <section>
     <div class="mb-2">
+        {{#if posts.length}}
         <div class="col-12 bg-primary">
             <div class="text-light p-1 pt-3">
                 <h2>Your Posts</h2>
@@ -14,15 +14,12 @@
             </li>
             {{/each}}
         </ol>
+        {{/if}}
         <div class="text-center btnDiv">
             <button type="button" class="btn btn-primary"><a class="btn-primary" href="/dashboard/newpost">+ New
                     Post</a></button>
         </div>
+    </div>
 </section>
-{{/if}}
-</div>
-
-
-
 
 <script src="/javascript/add-post.js"></script>
