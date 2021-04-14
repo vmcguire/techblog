@@ -107,6 +107,11 @@ router.put("/:id", withAuth, (req, res) => {
 });
 
 router.delete("/:id", withAuth, (req, res) => {
+  Comment.destroy({
+    where: {
+      post_id: req.params.id,
+    },
+  });
   Post.destroy({
     where: {
       id: req.params.id,
