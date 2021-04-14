@@ -1,13 +1,13 @@
 <div class="row p-2">
     <div class="col-12">
         <a href="/dashboard"> &larr; Back to dashboard</a>
-        <div class="border">
+        <div class="border mb-2">
             <div class="col-12 bg-primary">
                 <div class="text-light p-1 pt-3">
                     <h4>Edit Post</h4>
                 </div>
             </div>
-            <form class="col-12 edit-post-form">
+            <form class="col-12 edit-post-form delete-post-form">
                 <div class="px-5 py-3 edit-post-form">
                     <div class="form-group">
                         <label for="Title">Title</label>
@@ -39,33 +39,49 @@
                         </button>
                     </div>
                 </div>
-                <form class="row delete-post-form">
-                    <div class="col-12">
+                <div class="row ">
+                    <div class="col-12 mb-2">
                         <button type="button" class="delete-post-btn btn btn-primary btnWidth my-2">
                             Delete
                         </button>
                     </div>
-                </form>
+                </div>
+            </form>
+
+
+        </div>
+        <div class="border mb-2">
+            <div class="col-12 bg-primary">
+                <div class="text-light p-1 pt-3">
+                    <h4>Add Comment</h4>
+                </div>
+            </div>
+            <form class="comment-form col-12">
+                <div class="row">
+                    <div class="col-12 my-4">
+                        <input class="text-area" id="post-comment" name="post-comment" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 my-4">
+                        <button type="button" class="add-comment-btn btn btn-primary btnWidth">
+                            Add Comment
+                        </button>
+                    </div>
+                </div>
             </form>
         </div>
+        <div class="border mb-2">
+            <div class="col-12 bg-primary">
+                <div class="text-light p-1 pt-3">
+                    <h4>Comments</h4>
+                </div>
+            </div>
+            {{> comments post.comments}}
+        </div>
+
     </div>
 </div>
-</div>
-</div>
-
-<form class="comment-form">
-    <div>
-        <input class="text-area" id="post-comment" name="post-comment" />
-    </div>
-
-    <div>
-        <button type="button" class="add-comment-btn btn btn-primary btnWidth my-2">
-            Add Comment
-        </button>
-    </div>
-</form>
-
-{{> comments post.comments}}
 
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>

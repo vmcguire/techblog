@@ -6,6 +6,15 @@ body {
 
 li.nostyle {
   list-style-type: none;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+}
+ol.nostyle {
+  list-style-type: none;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
 }
 
 .bottom-center {
@@ -18,7 +27,7 @@ li.nostyle {
   width: 100%;
   left: 0;
   bottom: 10px;
-  position: absolute;
+  /* position: absolute; */
 }
 .text-area {
   min-width: 100%;

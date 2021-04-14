@@ -71,6 +71,7 @@ router.get("/post/:id", (req, res) => {
       res.render("single-post", {
         post,
         loggedIn: req.session.loggedIn,
+        currentUser: req.session.username,
       });
     })
     .catch((err) => {

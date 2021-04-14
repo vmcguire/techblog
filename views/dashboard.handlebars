@@ -1,56 +1,28 @@
-<div class="row p-2">
-    <div class="col-12">
-        <div class="border">
-            <div class="col-12 bg-primary">
-                <div class="text-light p-1 pt-3">
-                    <h4>Create New Post</h4>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="px-5 py-3">
-                    <form class="new-post-form">
-                        <div class="form-group">
-                            <label for="Title">Title</label>
-                            <div class="row px-2">
-                                <input class="text-area" type="text" id="post-title" name="post-title" />
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="Content">Content</label>
-                            <div class="row px-2">
-                                <input class="text-area" id="post-content" name="post-content" />
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-primary btnWidth">Create</button>
-                            </div>
-                        </div>
-                </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
 {{#if posts.length}}
 <section>
-    <h2>Your Posts</h2>
-    <ol>
-        {{#each posts as |post|}}
-        <li class="nostyle">
-            {{> post-info post}}
-            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-        </li>
-        {{/each}}
-    </ol>
+    <div class="mb-2">
+        <div class="col-12 bg-primary">
+            <div class="text-light p-1 pt-3">
+                <h2>Your Posts</h2>
+            </div>
+        </div>
+        <ol class="nostyle">
+            {{#each posts as |post|}}
+            <li class="nostyle">
+                {{> post-info-dashboard post}}
+                <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+            </li>
+            {{/each}}
+        </ol>
+        <div class="text-center btnDiv">
+            <button type="button" class="btn btn-primary"><a class="btn-primary" href="/dashboard/newpost">+ New
+                    Post</a></button>
+        </div>
 </section>
 {{/if}}
-
-<div class="text-center btnDiv">
-    <button type="button" class="btn btn-primary">+ New Post</button>
 </div>
+
+
+
 
 <script src="/javascript/add-post.js"></script>
