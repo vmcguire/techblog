@@ -1,61 +1,133 @@
-# techblog
+[![License: Open Data Commons Attribution](https://img.shields.io/badge/License-ODC_BY-brightgreen.svg)](https://opendatacommons.org/licenses/by/)
 
-User Story
-AS A developer who writes about tech
-I WANT a CMS-style blog site
-SO THAT I can publish articles, blog posts, and my thoughts and opinions
+# Tech Blog
 
-Acceptance Criteria
-GIVEN a CMS-style blog site
+## Week 14 Challenge
 
-WHEN I visit the site for the first time
-THEN I am presented with the homepage, which includes existing blog posts if any have been posted; navigation links for the homepage and the dashboard; and the option to log in
+### Victor McGuire
 
-WHEN I click on the homepage option
-THEN I am taken to the homepage
+## Table of Contents
 
-WHEN I click on any other links in the navigation
-THEN I am prompted to either sign up or sign in
+1. [Description](#Description)
+2. [Installation Instructions](#Installation-Instructions)
+3. [Usage Instructions](#Usage-Instructions)
+4. [Questions](#Questions)
+5. [License](#License)
 
-WHEN I choose to sign up
-THEN I am prompted to create a username and password
+## Description
 
-WHEN I click on the sign-up button
-THEN my user credentials are saved and I am logged into the site
+The purpose of this project is to create a tech blog which allows users to signup, login, add posts, update posts, delete posts, and add comments.
 
-WHEN I revisit the site at a later time and choose to sign in
-THEN I am prompted to enter my username and password
+## Installation Instructions
 
-WHEN I am signed in to the site
-THEN I see navigation links for the homepage, the dashboard, and the option to log out
+Access the application here: https://vast-ocean-28047.herokuapp.com/
 
-WHEN I click on the homepage option in the navigation
-THEN I am taken to the homepage and presented with existing blog posts that include the post title and the date created
+You can download the files: https://github.com/vmcguire/just-tech-news
 
-WHEN I click on an existing blog post
-THEN I am presented with the post title, contents, post creator’s username, and date created for that post and have the option to leave a comment
+Depnedencies to install via npm include: bcrypt, connect-session-sequelize, dotenv, express, express-handlebars, express-session, mysql2, and sequelize.
 
-WHEN I enter a comment and click on the submit button while signed in
-THEN the comment is saved and the post is updated to display the comment, the comment creator’s username, and the date created
+## Usage Instructions
 
-WHEN I click on the dashboard option in the navigation
-THEN I am taken to the dashboard and presented with any blog posts I have already created and the option to add a new blog post
+### Signup or Login
 
-WHEN I click on the button to add a new blog post
-THEN I am prompted to enter both a title and contents for my blog post
+Once you access the site, there may not be any posts which would mean no posts have been made. If there are any posts they will be displayed.
 
-WHEN I click on the button to create a new blog post
-THEN the title and contents of my post are saved and I am taken back to an updated dashboard with my new blog post
+If you do not have a user account, click login above.
 
-WHEN I click on one of my existing posts in the dashboard
-THEN I am able to delete or update my post and taken back to an updated dashboard
+![screenshot](assets/images/1.png)
 
-WHEN I click on the logout option in the navigation
-THEN I am signed out of the site
+Once you click login, the screen below will be displayed. You may login if you already have an account by entering your email and password. If not move to the next screenshot.
 
-WHEN I am idle on the page for more than a set time
-THEN I am automatically signed out of the site
+![screenshot](assets/images/2.png)
 
-Getting Started
-Your application’s folder structure must follow the Model-View-Controller paradigm. You’ll need to use the express-handlebars (Links to an external site.) package to use Handlebars.js for your Views, use the MySQL2 (Links to an external site.) and Sequelize (Links to an external site.) packages to connect to a MySQL database for your Models, and create an Express.js API for your Controllers.
-You’ll also need the dotenv package (Links to an external site.) to use environment variables, the bcrypt package (Links to an external site.) to hash passwords, and the express-session (Links to an external site.) and connect-session-sequelize (Links to an external site.) packages to add authentication.
+If you do not have a user account, click signup to be directed to the signup page. Input your username, email, and password.
+
+![screenshot](assets/images/3.png)
+
+Once you login or signup, you will be directed to your dashboard page. You can always go to the dashboard by clicking your dashboard button in the top right of the page. Go ahead and create a post by clicking the New Post button.
+
+![screenshot](assets/images/4.png)
+
+### Creating and Viewing Posts
+
+You will be directed to this screen where you can make a post. We have input some text for demonstration purposes. Click create to move to make the post!
+
+![screenshot](assets/images/5.png)
+
+Now, in your dashboard view, you will see a list of Your Posts. We only have one here but if you make more they will show up below.
+
+![screenshot](assets/images/6.png)
+
+#### Edit Posts
+
+From here, you can edit your post. You can click the post title, or the edit post button to do so. You will see here, that we have taken the liberty to make some edits to the title and content. Click Update post to make the update.
+
+![screenshot](assets/images/7.png)
+
+Edits will be shown in your dashboard. Let's go ahead and make a comment to the post now by clicking the title of the post, or edit post.
+
+![screenshot](assets/images/8.png)
+
+#### Adding Comments to Posts
+
+If you scroll down in your dashboard view, you will see the Add Comment section. Here we are adding a demo comment. Go ahead and type in a comment and click Add Comment.
+
+![screenshot](assets/images/9.png)
+
+You will see your comment count in your Edit Post `(off-screen above)` is upped to 1, and below your new comment is shown.
+
+![screenshot](assets/images/10.png)
+
+#### Deleting Posts
+
+Let's navigate back to the dashboard to see your posts by clicking your dashboard in the top right of the screen. Let's go ahead and delete this post. Click the title or the Edit post link below the post.
+
+![screenshot](assets/images/11.png)
+
+Click Delete button.
+
+![screenshot](assets/images/12.png)
+
+You should see this screen now.
+
+![screenshot](assets/images/13.png)
+
+### Multiple User Interaction
+
+Now let's take a look at commenting on other posts from other users. Here we have several posts from two different users.
+
+![screenshot](assets/images/14.png)
+
+For demo purposes, I'm signed in as Mark. I see the post regarding the 49ers but I'm a NY Giants fan and I'd love to comment and adjust their perspective with some knowledge! I'm going to click on that top post.
+
+![screenshot](assets/images/15.png)
+
+A comment is put in and submitted by clicking Submit Comment.
+
+![screenshot](assets/images/16.png)
+
+And here is the comment updated below.
+
+![screenshot](assets/images/17.png)
+
+For demo purposes, we have logged in as Victor, another user,`(note we are in Victor's Dashboard now via top right of the screen)`, I notice there is 1 comment on my post. I will click that comment link to respond!
+
+![screenshot](assets/images/18.png)
+
+Sample comment shown below.
+
+![screenshot](assets/images/19.png)
+
+Comment displayed once submitted!
+
+![screenshot](assets/images/20.png)
+
+## Developer Instructions
+
+To start the server on your local machine, execute in the command line, npm start. You will need to install the aforementioned dependencies in the [Installation Instructions](#Installation-Instructions).
+
+## Questions
+
+Please visit my repo here for any further questions: <https://github.com/vmcguire>
+
+My email address is: <victor.mcguire@gmail.com>
